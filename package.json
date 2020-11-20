@@ -14,7 +14,7 @@
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
-    "prepare": "run-s build",
+    "prepare": "run-s build && doctoc README.md",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
     "test:lint": "eslint .",
@@ -29,6 +29,7 @@
     "@testing-library/react": "^11.2.0",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
+    "doctoc": "^1.4.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-standard": "^14.1.0",
