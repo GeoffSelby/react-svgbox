@@ -1,6 +1,13 @@
 import React from 'react'
-import styles from './styles.module.css'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+const Icon = ({ className, iconSet, icon, fillColor, ...rest }) => {
+  return (
+    <img
+      {...rest}
+      className={className}
+      src={`//s.svgbox.net/${iconSet}.svg?fill=${fillColor}#${icon}`}
+    />
+  )
 }
+
+export default Icon
